@@ -1,4 +1,4 @@
-package com.roynaldi19.dc3_04restaurantreview
+package com.roynaldi19.dc3_04restaurantreview.ui
 
 import android.os.Bundle
 import android.util.Log
@@ -7,13 +7,17 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
+import com.roynaldi19.dc3_04restaurantreview.adapter.ReviewAdapter
+import com.roynaldi19.dc3_04restaurantreview.data.response.CustomerReviewsItem
+import com.roynaldi19.dc3_04restaurantreview.data.response.Restaurant
+import com.roynaldi19.dc3_04restaurantreview.data.response.RestaurantResponse
+import com.roynaldi19.dc3_04restaurantreview.data.retrofit.ApiConfig
 import com.roynaldi19.dc3_04restaurantreview.databinding.ActivityMainBinding
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 class MainActivity : AppCompatActivity() {
-
     private lateinit var binding: ActivityMainBinding
 
     companion object {
@@ -34,7 +38,6 @@ class MainActivity : AppCompatActivity() {
         binding.rvReview.addItemDecoration(itemDecoration)
 
         findRestaurant()
-
     }
 
     private fun findRestaurant() {
@@ -69,22 +72,11 @@ class MainActivity : AppCompatActivity() {
         Glide.with(this@MainActivity)
             .load("https://restaurant-api.dicoding.dev/images/large/${restaurant.pictureId}")
             .into(binding.ivPicture)
-
     }
 
     private fun setReviewData(consumerReviews: List<CustomerReviewsItem>){
-        val listReview = ArrayList<String>()
-        for (review in consumerReviews){
-            listReview.add(
-                """
-                ${review.review}
-                - ${review.name}
-                """.trimIndent()
-
-            )
-        }
-
-        val adapter = ReviewAdapter(listReview)
+        val adapter = ReviewAdapter()
+        adapter.submitList(consumerReviews)
         binding.rvReview.adapter = adapter
         binding.edReview.setText("")
 

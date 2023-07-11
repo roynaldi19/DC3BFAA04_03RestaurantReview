@@ -1,4 +1,4 @@
-package com.roynaldi19.dc3_04restaurantreview
+package com.roynaldi19.dc3_04restaurantreview.data.retrofit
 
 import androidx.viewbinding.BuildConfig
 import okhttp3.OkHttpClient

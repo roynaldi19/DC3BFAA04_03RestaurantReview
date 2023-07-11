@@ -1,4 +1,4 @@
-package com.roynaldi19.dc3_04restaurantreview
+package com.roynaldi19.dc3_04restaurantreview.data.response
 
 import com.google.gson.annotations.SerializedName
 

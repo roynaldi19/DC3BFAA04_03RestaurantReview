@@ -1,4 +1,4 @@
-package com.roynaldi19.bfaa04_03restaurantreview
+package com.roynaldi19.dc3_04restaurantreview
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

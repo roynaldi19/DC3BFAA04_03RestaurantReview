@@ -1,4 +1,4 @@
-package com.roynaldi19.bfaa04_03restaurantreview
+package com.roynaldi19.dc3_04restaurantreview
 
 import android.view.LayoutInflater
 import android.view.View

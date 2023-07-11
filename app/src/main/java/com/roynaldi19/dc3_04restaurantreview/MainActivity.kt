@@ -1,4 +1,4 @@
-package com.roynaldi19.bfaa04_03restaurantreview
+package com.roynaldi19.dc3_04restaurantreview
 
 import android.os.Bundle
 import android.util.Log
@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
-import com.roynaldi19.bfaa04_03restaurantreview.databinding.ActivityMainBinding
+import com.roynaldi19.dc3_04restaurantreview.databinding.ActivityMainBinding
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
